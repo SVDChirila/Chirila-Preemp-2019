@@ -4,7 +4,9 @@ body{
     
 }
 
-
+*{
+    font-family: helvetica;
+}
 
 .topnav{
    
@@ -33,7 +35,7 @@ body{
     
     left: 20%;
     top: 30%;
-    font-size: 20px;
+    font-size: 15px;
     
 
 
@@ -43,7 +45,7 @@ body{
     color:#6364d8;
     left: 20%;
     top: 30%;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
    
 
@@ -54,7 +56,7 @@ body{
     color:#2d2d2d;
     left: 30%;
     top: 30%;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     
 
@@ -78,7 +80,7 @@ body{
     color:#2d2d2d;
     left: 40%;
     top: 30%;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     
 }
@@ -93,16 +95,18 @@ body{
     vertical-align: middle;
     text-align: center;
     /*padding-bottom: 40px; */
-    padding-left: 100px;
+    padding-left: 150px;
 }
 
 #search{
     
     display: inline-block;
     width: 630px;
-    height: 25px;
+    height: 30px;
     vertical-align: middle;
     margin: 0px;
+    border-style: hidden;
+    border-radius: 5px;
 }
 #container{
     text-align: center;
@@ -124,8 +128,8 @@ body{
     color:#ffffff;
     text-decoration: none;
     border-style: transparent;
-    border-radius: 3px;
-      }
+    border-radius: 5px;
+    }
 
 
 
@@ -133,6 +137,7 @@ body{
     vertical-align: middle;
     height: 20px;
     width: 20px;
+    padding: 2px;
 
 }
 
@@ -147,7 +152,8 @@ body{
       padding-left: 20px;
     padding-bottom: 8px;
     padding-right: 12px;
-      
+    border-style: transparent;
+    border-radius: 5px;
   }
 
   #cartcont{
@@ -160,8 +166,8 @@ body{
       position: fixed;
       width: 250px;
       height: 65% fill;
-      margin-left: 80px;
-      margin-top: 115px;
+      margin-left: 75px;
+      margin-top: 90px;
       text-align: center;
       box-shadow: 0px 4px 17px 0px #797979;
      
