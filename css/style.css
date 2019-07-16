@@ -80,7 +80,7 @@ body{
     top: 30%;
     font-size: 20px;
     text-decoration: none;
-    /*padding-bottom: 40px !important;*/
+    
 }
 
 #menu li{
@@ -99,11 +99,76 @@ body{
 #search{
     
     display: inline-block;
-    width: 150px;
-    
-
+    width: 630px;
+    height: 25px;
+    vertical-align: middle;
+    margin: 0px;
 }
 #container{
     text-align: center;
-    padding-bottom: 50px;
+    margin: auto;
+    padding: 15px;
 }
+
+
+
+#cart{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    background: #6364d8;
+    vertical-align: middle;
+    font-size: 20px;
+    font-family: Helvetica;
+    color:#ffffff;
+    text-decoration: none;
+    border-style: transparent;
+    border-radius: 3px;
+      }
+
+
+
+#cart img{
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+
+}
+
+
+  #cart span{
+      background: #393ab1;
+      width: 35px;
+      height: 30px;
+      font-family: Helvetica;
+      font-size: 20px;
+      color: #ffffff;
+      padding-left: 20px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+      
+  }
+
+  #cartcont{
+      display: inline-block;
+  }
+
+  .menu{
+      z-index: 1;
+      background: #ffffff;
+      position: fixed;
+      width: 250px;
+      height: 65% fill;
+      margin-left: 80px;
+      margin-top: 115px;
+      text-align: center;
+      box-shadow: 0px 4px 17px 0px #797979;
+     
+     
+  }
+
+  .menu p{
+      font-family: Helvetica;
+      font-size: 25px;
+  }
