@@ -1,78 +1,109 @@
 body{
-    background:grey;
+    background: #ffffff;;
     margin: 0;
     
 }
 
 
 
-.sidenav{
-
-    width: 15%;
-    height: 100%;
-    background: #2f373f;
-    position: absolute;
-    top: 0;
-}
-
-footer{
-    margin: auto;
-}
-
-article{
-  
-    text-align: center;
-    color: white;
-
-
-}
-h3{
-
+.topnav{
    
-    text-align: center;
-    color: white;
-}
-table{
-    text-align: center;
-    box-align:center;
-    border: white;
-    color:white;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
-}
-
-.det{
-    text-decoration: none;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-img{
-    
-    display: block;
-    margin-left: auto;
-    margin-right: auto;        
-      
-}
-.proddet{
-    text-align: center;
-    color: white;
-    width: 50%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-footer{
-    position: fixed;
-    left: 0;
-    bottom:0;
     width: 100%;
-    color: white;
+    height: 20%;
+    background: #f8cb00;
+    position: fixed;
+    top:0;
+    display: table;
+    
+    
+}
+
+#title{
+    font-family: Helvetica;
+    font-size: 25px;
+    color: #ffffff;
+    left: 10%;
+    text-align: center top;
+    /*padding-bottom: 65px !important;*/
+   
+
+}
+
+#location{
+    
+    left: 20%;
+    top: 30%;
+    font-size: 20px;
+    
+
+
+}
+
+#city{
+    color:#6364d8;
+    left: 20%;
+    top: 30%;
+    font-size: 20px;
+    text-decoration: none;
+   
+
+}
+
+#phone{
+   
+    color:#2d2d2d;
+    left: 30%;
+    top: 30%;
+    font-size: 20px;
+    text-decoration: none;
+    
+
+
+}
+
+.topnav div p{
+    display: inline-block;
     text-align: center;
+}
+
+.navicons{
+    padding-right: 4px;
+    width: 15px;
+    height: 16px;
+    display: inline;
+}
+
+#menu{
+    
+    color:#2d2d2d;
+    left: 40%;
+    top: 30%;
+    font-size: 20px;
+    text-decoration: none;
+    /*padding-bottom: 40px !important;*/
+}
+
+#menu li{
+    display: inline;
+    padding-left: 15px;
+}
+
+#phone,#location,#title,#menu{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    /*padding-bottom: 40px; */
+    padding-left: 100px;
+}
+
+#search{
+    
+    display: inline-block;
+    width: 150px;
+    
+
+}
+#container{
+    text-align: center;
+    padding-bottom: 50px;
 }
