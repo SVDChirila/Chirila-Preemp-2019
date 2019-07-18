@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chirila Dan</title>
+</head>
+<body>
+  
+    <div class="form">
+        <div class="form-cont" style="border-bottom: 1px solid;">
+        <form action="foo.php" method="POST" enctype="multipart/form-data">
+        Please fill in the following details to complete your registration <br>
+
+        <label>First name: <input type="text" name="fname" placeholder="First name" /></label><br>
+        <label> Last name: <input type="text" name="lname" placeholder="Last name" /></label><br>
+        Occupation: <br> <select name="occ">
+            <option value="1">Tester</option>
+            <option value="2">Programmer</option>
+            <option value="3">Product Owner</option>
+            <option value="4">Designer</option>
+            <option value="5">Architect</option>
+            <option value="6">Scrum Master</option>
+        </select> <br>
+
+        Lunch preference:<br/>
+        <label><input type="radio" name="lunch" value="1">Basic</label><br>
+        <label><input type="radio" name="lunch" value="2">Vegetarian</label><br>
+        <label><input type="radio" name="lunch" value="3">Vegan</label><br>
+
+        Your profile picture:
+        <input type="file" name="profile">
+        </div>
+
+        <div class="agree">
+           <label> <input type="checkbox" name="yes">I agree to the terms and conditions.</label>
+
+        </div>
+
+        <input type="submit" value="submit">
+
+</form>
+
+
+
+    </div>
+
+
+
+</body>
+</html>
