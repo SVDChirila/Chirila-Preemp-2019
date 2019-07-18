@@ -358,6 +358,15 @@ html{
 }
 
 
+.main-container1{
+    display: flex;
+    width: 1390px;
+    margin: 10% auto;
+
+    
+}
+
+
 
 
 
