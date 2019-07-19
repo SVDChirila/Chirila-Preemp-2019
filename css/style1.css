@@ -4,13 +4,13 @@
 }
 
 html{
-    font-family: helvetica;
+    font-family: helvetica,serif, thin;
 }
 
 h1{
     font-family: Helvetica;
     font-size: 30px;
-    margin-top: 4%;
+    margin-top: 10%;
     color: #ffffff;
 }
 
@@ -18,14 +18,26 @@ h1{
 
     background: #f8cb00;
     width: 100%;
+    position: absolute;
+    top: 0;
     
 }
 
 .main-container{
 
-    width: 1200px;
+    width: 80%;
     margin: 0 auto;
     display: flex;
+
+
+}
+
+.main-container1{
+
+    width: 80%;
+    margin: 12% auto;
+    display: flex;
+
 
 
 }
@@ -41,6 +53,7 @@ h1{
 
 .top-menu ul li{
     display: inline;
+    padding: 0 10px 0 0;
 }
 
 .contact{
@@ -49,21 +62,22 @@ h1{
     text-align: center;
     vertical-align: middle;
     align-items: center;
-    margin: 3% auto;
-    font-size: 15px;
+    margin: 4% auto;
+    font-size: 17px;
 }
 
 .search{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-block-end: 1%;
-    margin-block-start: 1%;
+    margin-block-end: 2%;
+    /*margin-block-start: 1%;*/
 }
 
 #input{
     width: 100%;
     flex:3;
+    background: #ffffff;
 }
 
 #input input{
@@ -93,24 +107,27 @@ h1{
 }
 
 .cart a{
-    background: #7b72bb;
+    background: #6364d8;
     height: 30px;
-    padding: 10px 50px 0px 5px;
+    padding: 10px 50px 10px 15px;    
     /* float: none; */
     position: relative;
     border: transparent;
     border-radius: 3px;
+    color: #ffffff;
+    text-decoration: none;
     
 
 }
 
 .cart a span{
-    padding: 5px;
+    padding: 15px;
+    line-height: 1.7;
 }
 
 #item-nr{
     display: inline;
-    background:lightblue;
+    background:#393ab1;
     /* height: 25px; */
     /* float: right; */
     text-align: center;
@@ -118,8 +135,8 @@ h1{
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 0 10px;
-    line-height: 2.5;
+    padding: 0 15px;
+    line-height: 3;
     border: transparent;
     border-radius: 3px;
     border-top-left-radius: 0px;
@@ -129,20 +146,161 @@ h1{
 }
 
 .menu{
-    position: fixed;
-    border: 1px solid;
+    position: absolute;
+    border: transparent;
     background: #ffffff;
     box-shadow: 0px 1px 15px rgba(200,200,200,0.3);
-    width: 250px;
-    padding: 10px 15px;
+    width: 260px;
+    padding: 10px 15px 15px 10px;
+    border-radius: 5px;
+    top: 13%;
+    /* left: 17%; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
+}
+.menu span{
+    font-size: 14px;
+    color: #a3a3a3;
+}
 
+.add{
+    position: absolute;
+    top: 41rem;
+
+}
+.add img{
+    width: 18rem;
 }
 
 .menu ul{
-    font-size: 25px;
+    font-size: 16px;
+    position: relative;
 }
 
 .menu ul li{
     padding: 15px 0 0 0;
+}
+
+.sublist{
+    padding: 0 0 0 15px;
+    font-size: 15px !important;
+    color: #a7a5a7;
+}
+
+.shop-nav{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1%; 
+}
+
+.navb{
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+    border: transparent;
+    box-shadow: 0px 1px 15px rgba(200,200,200,0.3);
+    border-radius: 3px;
+    background: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.page{
+        padding: 0 5px;
+
+}
+
+.filter{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 1%;
+    padding: 5px 0 4px 0;
+    border-bottom: 1px solid;
+
+}
+
+.filter span{
+
+    padding: 0 20px 0px 0px;
+
+
+
+}
+
+.filter span a{
+    text-decoration: none;
+    color: #6364d8;
+}
+
+.sort{
+    padding: 0px !important;
+}
+
+
+.part2{
+    margin:0;
+    display: inline-flex;
+    justify-content: space-between;
+    flex:1;
+
+}
+
+
+.p-container{
+       display: flex;
+    width: 100%;
+    /* margin-left: 25px; */
+    margin-top: 10px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.product{
+
+     width: 200px;
+    height: 400px;
+    background: #ffffff;
+    box-shadow: 0px 1px 15px rgba(200,200,200,0.3);
+    border: none;
+    text-align: center;
+    /* padding: 10px 50px 20px 30px; */
+    flex: 0;
+    margin: 10px 0 40px 0;
+
+
+
+}
+.product img{
+    width: inherit;
+}
+.product span{
+  
+    
+}
+
+.p-name{
+    display: block;
+    font-size: 20px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    height: 35%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    margin: 20px 0 0 0;
+}
+
+.price{
+    font-size: 20px;
+    color: #f8cb00;
+}
+
+.contact span a{
+    text-decoration: none;
+    color: #6364d8;
 }
