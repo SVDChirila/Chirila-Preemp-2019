@@ -18,14 +18,14 @@ h1{
 
     background: #f8cb00;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     
 }
 
 .main-container{
 
-    width: 1500px;
+    width: 80%;
     margin: 0 auto;
     display: flex;
 
@@ -34,8 +34,8 @@ h1{
 
 .main-container1{
 
-    width: 1500px;
-    margin: 10% auto;
+    width: 80%;
+    margin: 12% auto;
     display: flex;
 
 
@@ -53,6 +53,7 @@ h1{
 
 .top-menu ul li{
     display: inline;
+    padding: 0 10px 0 0;
 }
 
 .contact{
@@ -76,6 +77,7 @@ h1{
 #input{
     width: 100%;
     flex:3;
+    background: #ffffff;
 }
 
 #input input{
@@ -105,7 +107,7 @@ h1{
 }
 
 .cart a{
-    background: #7b72bb;
+    background: #6364d8;
     height: 30px;
     padding: 10px 50px 10px 15px;    
     /* float: none; */
@@ -113,6 +115,7 @@ h1{
     border: transparent;
     border-radius: 3px;
     color: #ffffff;
+    text-decoration: none;
     
 
 }
@@ -143,21 +146,37 @@ h1{
 }
 
 .menu{
-    position: fixed;
-    border:transparent;
+    position: absolute;
+    border: transparent;
     background: #ffffff;
     box-shadow: 0px 1px 15px rgba(200,200,200,0.3);
     width: 260px;
-    padding: 10px 15px;
-    border-radius: 5px; 
-    top:12.3%;
-    /*left:17%;*/
+    padding: 10px 15px 15px 10px;
+    border-radius: 5px;
+    top: 13%;
+    /* left: 17%; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
+}
+.menu span{
+    font-size: 14px;
+    color: #a3a3a3;
+}
 
+.add{
+    position: absolute;
+    top: 41rem;
+
+}
+.add img{
+    width: 18rem;
 }
 
 .menu ul{
-    font-size: 25px;
+    font-size: 16px;
+    position: relative;
 }
 
 .menu ul li{
@@ -165,6 +184,7 @@ h1{
 }
 
 .sublist{
+    padding: 0 0 0 15px;
     font-size: 15px !important;
     color: #a7a5a7;
 }
@@ -200,6 +220,8 @@ h1{
     align-items: center;
     width: 100%;
     margin-top: 1%;
+    padding: 5px 0 4px 0;
+    border-bottom: 1px solid;
 
 }
 
@@ -209,6 +231,11 @@ h1{
 
 
 
+}
+
+.filter span a{
+    text-decoration: none;
+    color: #6364d8;
 }
 
 .sort{
@@ -242,9 +269,9 @@ h1{
     box-shadow: 0px 1px 15px rgba(200,200,200,0.3);
     border: none;
     text-align: center;
-    padding: 10px 50px 20px 30px;
-    flex: 1;
-    margin: 10px 0 40px auto;
+    /* padding: 10px 50px 20px 30px; */
+    flex: 0;
+    margin: 10px 0 40px 0;
 
 
 
@@ -253,17 +280,27 @@ h1{
     width: inherit;
 }
 .product span{
+  
+    
+}
+
+.p-name{
     display: block;
-    font-size: 30px;
+    font-size: 20px;
     word-break: break-all;
     text-overflow: ellipsis;
     height: 35%;
     margin-bottom: 20px;
     overflow: hidden;
-    
+    margin: 20px 0 0 0;
 }
 
 .price{
-    font-size: 35px;
-    color: #393ab1;
+    font-size: 20px;
+    color: #f8cb00;
+}
+
+.contact span a{
+    text-decoration: none;
+    color: #6364d8;
 }
