@@ -14,7 +14,9 @@ var addbtn = document.getElementsByClassName("add");
 var sum = document.getElementById("total");
 var rembtn = document.getElementsByClassName("remove");
 
-
+var fnameflag = false;
+var lnameflag = false;
+var emailflag = false;
 
 
 
@@ -29,18 +31,21 @@ var rembtn = document.getElementsByClassName("remove");
 
 // frm.action = "";
 
-document.getElementById("checkout").disabled = false;
+
 
 document.getElementById("firstName").addEventListener("blur", function(event) {
     var value = document.getElementById("firstName").value;
     if (value == "" || reg.test(value) == false) {
         document.getElementById("firstName").setAttribute("style", "border: 1px solid red;");
         document.getElementById("errfname").setAttribute("style", "display: block; color:red;");
+        fnameflag = false;
     } else {
         
         document.getElementById("firstName").setAttribute("style", "border: 1px solid #777777;");
         document.getElementById("errfname").setAttribute("style", "display: none; color:red;");
+        fnameflag = true;
     }
+    enableChk();
 });
 
 
@@ -50,11 +55,14 @@ document.getElementById("lastName").addEventListener("blur", function(event) {
     if (value == ""  || reg.test(value) == false) {
         document.getElementById("lastName").setAttribute("style", "border: 1px solid red;");
         document.getElementById("errlname").setAttribute("style", "display: block; color:red;");
+        lnameflag = false
         
     } else {
         document.getElementById("lastName").setAttribute("style", "border: 1px solid #777777;");
         document.getElementById("errlname").setAttribute("style", "display: none; color:red;");
+        lnameflag = true;
     }
+    enableChk()
 });
 
 
@@ -63,10 +71,14 @@ document.getElementById("email").addEventListener("blur", function(event) {
     if (value == ""  || mail.test(value) == false) {
         document.getElementById("email").setAttribute("style", "border: 1px solid red;");
         document.getElementById("errmail").setAttribute("style", "display: block; color:red;");
+        emailflag = false;
     } else {
         document.getElementById("email").setAttribute("style", "border: 1px solid #777777;");
         document.getElementById("errmail").setAttribute("style", "display: none; color:red;");
+
+        emailflag = true;
     }
+    enableChk();
 });
 
 
@@ -81,6 +93,25 @@ document.getElementById("phone").addEventListener("blur", function(event) {
         document.getElementById("errphone").setAttribute("style", "display: none; color:red;");
     }
 });
+
+function enableChk(){
+
+    console.log(fnameflag,lnameflag,emailflag);
+
+    if(fnameflag && lnameflag && emailflag){
+
+
+        document.getElementById("checkout").disabled = false;
+
+
+    }else{
+
+    }
+
+
+
+}
+
 
 for(var i = 0 ; i < addbtn.length; i++){
 
@@ -184,14 +215,19 @@ function remValue(e){
 
 
 var elements = document.getElementsByClassName("remove-item");
-for(var i = 0; i <= elements.length; i++){
+
+
+for(var i = 0; i < elements.length; i++){
    /* elements[i].addEventListener("click", deleteFunction, false) */
   
+    
    elements[i].onclick=deleteFunction;
    
 
 
 }
+
+
 function deleteFunction(e){
    e.target.parentElement.parentElement.style.display = "none";
 
