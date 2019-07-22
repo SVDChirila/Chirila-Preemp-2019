@@ -1,20 +1,35 @@
-reg = /^[a-zA-Z]+$/;
-mail = /\S+@\S+\.\S+/;
-phone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+// --------------------------- VARIABLES -----------------------------------
+var reg = /^[a-zA-Z]+$/;
+var mail = /\S+@\S+\.\S+/;
+var phone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+var frm = document.getElementById("form");
+
+var fname = document.getElementById("firstName");
+var lname = document.getElementById("lastName");
+var email = document.getElementById("email");
 
 
-Array.from(document.getElementsByClassName("add")).forEach( function(element){
-    element.addEventListener("click", function(event){
-       Array.from(document.getElementsByClassName("quantity")).forEach(function(element) {
+var addbtn = document.getElementsByClassName("add");
 
-      element.value = element.value + 1;
-
+var sum = document.getElementById("total");
+var rembtn = document.getElementsByClassName("remove");
 
 
-       })
-    })
-});
 
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+// frm.action = "";
+
+document.getElementById("checkout").disabled = false;
 
 document.getElementById("firstName").addEventListener("blur", function(event) {
     var value = document.getElementById("firstName").value;
@@ -66,5 +81,135 @@ document.getElementById("phone").addEventListener("blur", function(event) {
         document.getElementById("errphone").setAttribute("style", "display: none; color:red;");
     }
 });
+
+for(var i = 0 ; i < addbtn.length; i++){
+
+    addbtn[i].onclick = addValue;
+    
+
+
+
+}
+
+
+for(var i = 0; i < rembtn.length; i++){
+
+    rembtn[i].onclick = remValue;
+
+
+}
+
+
+
+
+function addValue(e){
+
+
+   
+    var price = e.target.parentElement.parentElement.children[2].textContent;
+    var quantity =e.target.parentElement.children[1].textContent;
+    var sum = document.querySelector("#total").textContent;
+    sum = parseInt(sum);
+    quantity = parseInt(quantity);
+    price = parseInt(price);
+    quantity++;
+    var total = e.target.parentElement.parentElement.children[4].textContent;
+
+    total = parseInt(total);
+
+    total = price * quantity;
+    sum = sum + price;
+    total = total.toString();
+    sum = sum.toString();
+    console.log(total);
+
+    quantity = quantity.toString();
+    e.target.parentElement.children[1].innerHTML = quantity;
+    e.target.parentElement.parentElement.children[4].innerHTML = total;
+    document.querySelector("#total").innerHTML = sum;
+
+
+}
+
+
+
+function remValue(e){
+
+
+    var price = e.target.parentElement.parentElement.children[2].textContent;
+    var quantity =e.target.parentElement.children[1].textContent;
+    var sum = document.querySelector("#total").textContent;
+    sum = parseInt(sum);
+    quantity = parseInt(quantity);
+    price = parseInt(price);
+   
+    var total = e.target.parentElement.parentElement.children[4].textContent;
+
+    total = parseInt(total);
+
+   
+
+    if(quantity >1 ){ 
+        
+        
+        quantity--;
+    
+     total = price * quantity;
+    sum = sum - price;
+    
+    
+    
+    }
+
+    total = total.toString();
+    sum = sum.toString();
+    console.log(total);
+
+    quantity = quantity.toString();
+    e.target.parentElement.children[1].innerHTML = quantity;
+    e.target.parentElement.parentElement.children[4].innerHTML = total;
+    document.querySelector("#total").innerHTML = sum;
+
+
+    
+
+
+
+
+}
+
+
+
+
+
+
+var elements = document.getElementsByClassName("remove-item");
+for(var i = 0; i <= elements.length; i++){
+   /* elements[i].addEventListener("click", deleteFunction, false) */
+  
+   elements[i].onclick=deleteFunction;
+   
+
+
+}
+function deleteFunction(e){
+   e.target.parentElement.parentElement.style.display = "none";
+
+   var total = e.target.parentElement.parentElement.children[4].textContent;
+   
+  
+   total = parseInt(total);
+  ;
+   var sum = document.querySelector("#total").textContent;
+   sum = parseInt(sum);
+
+
+   sum = sum - total;
+
+   sum = sum.toString();
+
+   document.querySelector("#total").innerHTML = sum;
+};
+
 
 
