@@ -43,6 +43,7 @@ function remimg(event){
     rem.addEventListener("click", delimg);
     image.addEventListener("click", remimg);
     document.body.addEventListener("click", function(event){
+        alert("something was clicked")
         console.log(event.target+" was clicked");
     })
     also.addEventListener("click", function(event){
