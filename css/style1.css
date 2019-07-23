@@ -525,8 +525,8 @@ body{
     }
 
 .product {
-    width: 150px;
-    height: 250px;
+    width: 200px;
+    height: 350px;
     background: #ffffff;
     box-shadow: 0px 1px 15px rgba(200,200,200,0.3);
     border: none;
@@ -612,7 +612,7 @@ body{
 
 .product {
     width: 200px;
-    height: 250px;
+    height: 350px;
     background: #ffffff;
     box-shadow: 0px 1px 15px rgba(200,200,200,0.3);
     border: none;
