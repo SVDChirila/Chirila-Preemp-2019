@@ -1,0 +1,39 @@
+#img{
+    height: 150px;
+}
+#add{
+    background: green;
+    color: #ffffff;
+    border: 1px transparent;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto
+}
+#add1{
+    background: blue;
+    color: #ffffff;
+    border: 1px transparent;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto
+}
+
+
+#rem{
+    background: red;
+    color: #ffffff;
+    border: 1px transparent;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto
+}
+
+img{display: none}
+
+.img{
+    display: block !important;
+    margin: 25px;
+}

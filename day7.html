@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chirila Dan</title>
+</head>
+<body>
+    
+
+    <div id="first">
+
+
+        <a href="" id="link">home</a>
+    </div>
+
+    <div id="page" style="padding: 20px; border:2px solid blue;">
+    
+    
+        <div id="container" style="padding: 20px; background: forestgreen;">
+        </div>
+    
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+<script>
+// ------------------------EXEMPLUL 1----------------------------
+
+    window.onload=function(){
+        alert('Page is loaded!');
+
+
+        var link = document.getElementById("link");
+        link.onclick = function(){
+            console.log('Clicked on link!');
+        }
+    }
+
+        
+
+    // window.onload = function(){
+    //     console.log("Second load");
+    // }
+
+// -------------------------------------------------------------
+
+
+// -----------------------Exemplul 2----------------------------------
+
+        // var link = document.getElementById('link');
+        // function eventHandler(event){
+        //             console.log(event.type + 'hover link', event.target.text);
+        //         }
+
+        // link.addEventListener('mouseenter', eventHandler)
+
+
+        //     // link.addEventListener("mouseenter", function(){
+
+
+            //     console.log('Hover once');
+            // },
+            // {once: true}
+            // )
+
+               
+
+
+        // link.removeEventListener("mouseenter",eventHandler);
+
+
+
+
+
+// -------------------------------------------------------------------- 
+
+
+// ------------------------------Exemplul 3---------------------------
+
+//     var link = document.getElementById("link");
+//     function eventHandler(event){console.log(event.type+'on',event.target.nodeName);}
+
+//     window.addEventListener("click", function(){
+
+
+
+//         document.documentElement.requestFullscreen();
+
+
+
+
+//     })
+
+// document.addEventListener("fullscreenchange",eventHandler);
+// link.addEventListener("mouseout", eventHandler)
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------
+
+
+// ---------------------------Exemplul 5-----------------------------
+
+
+    // var event = new Event("build");
+
+    // window.addEventListener("build",function(event){
+
+    //     console.log(event.type);
+
+
+
+    // }, false)
+
+    // window.dispatchEvent(event);
+
+
+// ------------------------------------------------------------------
+
+
+
+
+// --------------------------------Exemplul 6--------------------------
+
+
+
+var container = document.getElementById("container");
+var page = document.getElementById("page");
+
+function eventHandler(event){
+    console.log(event.type+" on "+event.currentTarget.id);
+    event.stopPropagation();
+}
+
+page.addEventListener("click", eventHandler);
+container.addEventListener("click", eventHandler);
+
+
+
+// ---------------------------------------------------------------------
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
